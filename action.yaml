@@ -1,0 +1,27 @@
+name: "GitHub Action Lint"
+description: "Lints GitHub Actions"
+inputs:
+  major-version:
+    required: true
+    description: "The major version to publish.  This will update the branch `v<major-version>` to the current git sha."
+  dry-run:
+    required: false
+    description: "Whether to run the action in dry-run mode - no branches will be created or pushed."
+runs:
+  using: composite
+  steps:
+    - name: Create and push branch
+      if: inputs.dry-run != 'true'
+      shell: bash
+      run: |
+        echo "Updating branch: v${{ inputs.major-version }}"
+        git branch -f v${{ inputs.major-version }}
+        git push -f origin v${{ inputs.major-version }}
+    - name: "Dry-run: Create and push branch"
+      if: inputs.dry-run == 'true'
+      shell: bash
+      run: |
+        echo "Updating branch: v${{ inputs.major-version }}"
+        echo "  (dry-run)"
+        echo "git branch -f v${{ inputs.major-version }}"
+        echo "push -f origin v${{ inputs.major-version }}"
