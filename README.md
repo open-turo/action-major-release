@@ -1,9 +1,9 @@
 # action-major-release
 
-![][version-image]
-![][workflows-badge-image]
-[![Release date][release-date-image]][release-url]
-[![semantic-release][semantic-image]][semantic-url]
+[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
+[![GitHub latest commit](https://badgen.net/github/last-commit/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+![Release](https://github.com/open-turo/action-major-release/actions/workflows/release.yaml/badge.svg)
 
 GitHub Action: creates a floating branch for the major release
 
