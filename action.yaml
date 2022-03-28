@@ -1,12 +1,13 @@
-name: "GitHub Action Lint"
-description: "Lints GitHub Actions"
+name: GitHub Action Major Release
+description: GitHub action to produce major releases
 inputs:
   major-version:
     required: true
-    description: "The major version to publish.  This will update the branch `v<major-version>` to the current git sha."
+    description: The major version to publish. This will update the branch `v<major-version>` to the current git sha.
   dry-run:
     required: false
-    description: "Whether to run the action in dry-run mode - no branches will be created or pushed."
+    description: Whether to run the action in dry-run mode - no branches will be created or pushed.
+    default: "false"
 runs:
   using: composite
   steps:
