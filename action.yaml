@@ -1,5 +1,5 @@
 name: GitHub Action Major Release
-description: GitHub action to produce major releases
+description: GitHub Action that conditionally creates a floating branch for a major release
 inputs:
   major-version:
     required: true
