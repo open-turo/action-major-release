@@ -2,7 +2,7 @@
 
 ## Description
 
-GitHub Action that conditionally creates a floating branch for a major release
+GitHub Action that conditionally creates a floating branch for a major release. This is best combined with Semantic Release to provide consistent major versioning. See [open-turo/actions-gha](https://github.com/open-turo/actions-gha), which calls this from its `./release` action for example usage.
 
 [![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
 [![GitHub latest commit](https://badgen.net/github/last-commit/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
