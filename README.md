@@ -11,12 +11,30 @@ GitHub Action that conditionally creates a floating branch for a major release. 
 
 ## Usage
 
+### Execute the action to create/update the major release
+
+In this case, a branch will be attempted to be created and pushed.
+
 ```yaml
 steps:
   - name: Major release
     uses: open-turo/action-major-release@v1
     with:
       major-version: 1
+```
+
+### Execute the action in "dry run" mode
+
+In this case, no branch will be created nor pushed. The commands that would be executed if not in dry run mode will be
+sent to stdout.
+
+```yaml
+steps:
+  - name: Major release
+    uses: open-turo/action-major-release@v1
+    with:
+      major-version: 1
+      dry-run: true
 ```
 
 ## Inputs
