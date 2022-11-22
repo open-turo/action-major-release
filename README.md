@@ -4,10 +4,14 @@
 
 GitHub Action that conditionally creates a floating branch for a major release. This is best combined with Semantic Release to provide consistent major versioning. See [open-turo/actions-gha](https://github.com/open-turo/actions-gha), which calls this from its `./release` action for example usage.
 
-[![GitHub release](https://img.shields.io/github/release/Naereen/StrapDown.js.svg)](https://GitHub.com/Naereen/StrapDown.js/releases/)
-[![GitHub latest commit](https://badgen.net/github/last-commit/Naereen/Strapdown.js)](https://GitHub.com/Naereen/StrapDown.js/commit/)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-![Release](https://github.com/open-turo/action-major-release/actions/workflows/release.yaml/badge.svg)
+[![Release](https://img.shields.io/github/v/release/open-turo/action-major-release)](https://github.com/open-turo/action-major-release/releases/)
+[![Tests pass/fail](https://img.shields.io/github/workflow/status/open-turo/action-major-release/CI)](https://github.com/open-turo/action-major-release/actions/)
+[![License](https://img.shields.io/github/license/open-turo/action-major-release)](./LICENSE)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/dwyl/esta/issues)
+![CI](https://github.com/open-turo/action-major-release/actions/workflows/release.yaml/badge.svg)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+[![Conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.2-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+[![Join us!](https://img.shields.io/badge/Turo-Join%20us%21-593CFB.svg)](https://turo.com/jobs)
 
 ## Usage
 
