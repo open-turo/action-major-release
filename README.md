@@ -1,17 +1,12 @@
 # `open-turo/action-major-release`
 
+<!-- prettier-ignore-start -->
+<!-- action-docs-description source="action.yaml" -->
 ## Description
 
-GitHub Action that conditionally creates a floating branch for a major release. This is best combined with Semantic Release to provide consistent major versioning. See [open-turo/actions-gha](https://github.com/open-turo/actions-gha), which calls this from its `./release` action for example usage.
-
-[![Release](https://img.shields.io/github/v/release/open-turo/action-major-release)](https://github.com/open-turo/action-major-release/releases/)
-[![Tests pass/fail](https://img.shields.io/github/workflow/status/open-turo/action-major-release/CI)](https://github.com/open-turo/action-major-release/actions/)
-[![License](https://img.shields.io/github/license/open-turo/action-major-release)](./LICENSE)
-[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/dwyl/esta/issues)
-![CI](https://github.com/open-turo/action-major-release/actions/workflows/release.yaml/badge.svg)
-[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
-[![Conventional commits](https://img.shields.io/badge/conventional%20commits-1.0.2-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
-[![Join us!](https://img.shields.io/badge/Turo-Join%20us%21-593CFB.svg)](https://turo.com/jobs)
+GitHub Action that conditionally creates a floating branch for a major release
+<!-- action-docs-description source="action.yaml" -->
+<!-- prettier-ignore-end -->
 
 ## Usage
 
@@ -41,21 +36,22 @@ steps:
       dry-run: true
 ```
 
+<!-- prettier-ignore-start -->
+<!-- action-docs-inputs source="action.yaml" -->
 ## Inputs
 
-| parameter     | description                                                                                          | required | default |
-| ------------- | ---------------------------------------------------------------------------------------------------- | -------- | ------- |
-| major-version | The major version to publish. This will update the branch `v<major-version>` to the current git sha. | `true`   |         |
-| dry-run       | Whether to run the action in dry-run mode - no branches will be created or pushed.                   | `false`  | false   |
+| name | description | required | default |
+| --- | --- | --- | --- |
+| `major-version` | <p>The major version to publish. This will update the branch <code>v&lt;major-version&gt;</code> to the current git sha.</p> | `true` | `""` |
+| `dry-run` | <p>Whether to run the action in dry-run mode - no branches will be created or pushed.</p> | `false` | `false` |
+<!-- action-docs-inputs source="action.yaml" -->
+<!-- action-docs-outputs source="action.yaml" -->
 
+<!-- action-docs-outputs source="action.yaml" -->
+<!-- action-docs-runs source="action.yaml" -->
 ## Runs
 
-This action is an `composite` action.
-
-## Get Help
-
-Please review Issues, post new Issues against this repository as needed.
-
-## Contributions
-
-Please see [here](https://github.com/open-turo/contributions) for guidelines on how to contribute to this project.
+This action is a `composite` action.
+<!-- action-docs-runs source="action.yaml" -->
+<!-- action-docs-usage source="action.yaml"  -->
+<!-- prettier-ignore-end -->
