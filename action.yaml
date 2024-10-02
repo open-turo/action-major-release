@@ -16,13 +16,17 @@ runs:
       shell: bash
       run: |
         echo "Updating branch: v${{ inputs.major-version }}"
-        git branch -f v${{ inputs.major-version }}
-        git push -f origin v${{ inputs.major-version }}
+        git tag -f v${{ inputs.major-version }}
+        git brach -f v${{ inputs.major-version }}
+        git push -f origin refs/tags/v${{ inputs.major-version }}
+        git push -f origin refs/heads/v${{ inputs.major-version }}
     - name: "Dry-run: Create and push branch"
       if: inputs.dry-run == 'true'
       shell: bash
       run: |
         echo "Updating branch: v${{ inputs.major-version }}"
         echo "  (dry-run)"
-        echo "git branch -f v${{ inputs.major-version }}"
-        echo "push -f origin v${{ inputs.major-version }}"
+        echo "git tag -f v${{ inputs.major-version }}"
+        echo "git brach -f v${{ inputs.major-version }}"
+        echo "git push -f origin refs/tags/v${{ inputs.major-version }}"
+        echo "git push -f origin refs/heads/v${{ inputs.major-version }}"
