@@ -14,19 +14,23 @@ runs:
     - name: Create and push branch
       if: inputs.dry-run != 'true'
       shell: bash
+      env:
+        MAJOR_VERSION: ${{ inputs.major-version }}
       run: |
-        echo "Updating branch: v${{ inputs.major-version }}"
-        git tag -f v${{ inputs.major-version }}
-        git branch -f v${{ inputs.major-version }}
-        git push -f origin refs/tags/v${{ inputs.major-version }}
-        git push -f origin refs/heads/v${{ inputs.major-version }}
+        echo "Updating branch: v$MAJOR_VERSION"
+        git tag -f v$MAJOR_VERSION
+        git branch -f v$MAJOR_VERSION
+        git push -f origin refs/tags/v$MAJOR_VERSION
+        git push -f origin refs/heads/v$MAJOR_VERSION
     - name: "Dry-run: Create and push branch"
       if: inputs.dry-run == 'true'
       shell: bash
+      env:
+        MAJOR_VERSION: ${{ inputs.major-version }}
       run: |
-        echo "Updating branch: v${{ inputs.major-version }}"
+        echo "Updating branch: v$MAJOR_VERSION"
         echo "  (dry-run)"
-        echo "git tag -f v${{ inputs.major-version }}"
-        echo "git branch -f v${{ inputs.major-version }}"
-        echo "git push -f origin refs/tags/v${{ inputs.major-version }}"
-        echo "git push -f origin refs/heads/v${{ inputs.major-version }}"
+        echo "git tag -f v$MAJOR_VERSION"
+        echo "git branch -f v$MAJOR_VERSION"
+        echo "git push -f origin refs/tags/v$MAJOR_VERSION"
+        echo "git push -f origin refs/heads/v$MAJOR_VERSION"
